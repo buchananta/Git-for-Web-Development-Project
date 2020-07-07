@@ -1,0 +1,114 @@
+link to pen: https://codepen.io/buchananta-the-looper/full/WNrzKvb
+
+
+<!-- Questions to Submit in today's file first-lastname.txt --> 
+<!--
+Copy the questions below into the first-lastname.txt file on your github repo - answer each question and then push your changes. 
+
+    1. What is Semantic HTML?
+      ----HTML tags that have implicit meaning, are inherently descriptive of their content.
+    2. What is HTML used for? 
+      ----To create the structure for content
+    3. What is an attribute and where do we put it? 
+      ----Attributes are inside the initial HTML tag. for example <a href="asdf">asdf</a> the href="asdf" is an attribute
+    4. What is the h1 tag used for? How many times should I use it on a page?
+      ----Generally the title of the page. Only should be used once.
+    5. Name two tags that have required attributes
+      ----I believe <a> tags do, and I know <img> tags require one.
+    6. What do we put in the head of our HTML document?
+      ----metadata about the file, and links to css, fonts, scripts, etc.
+    7. What is an id? 
+      ----unique identifiers to an element.
+    8. What elements can I add an id to?
+      ----any, but the id must be unique. 
+    9. How many times can I use the same id on a page? 
+      ----only once.
+    10. What is a class? 
+      ----a way to tag and identify one (or likely more) elements on a page.
+    11. What elements can I add a class to? 
+      ----any, and you can add the same class to multiple elements!
+    12. How many times can I use the same class on a page?
+      ----as many times as you want!
+    13. How do I get my link to open in a new tab?
+      ----add the "target" attribute, with the "_blank" value: target="_blank"
+    14. What is the alt attribute in the image tag used for? 
+      ----text to describe the image, for accessibility, and search engine optimization.
+    15. How do I reference an id?
+      ----use the octothorpe/pound/number/'#' sign, and then the name. such as <a href="#id-name">link to id</a>
+    16. What is the difference between a section and a div
+      ----section is semantic, div is not.
+    17. What is CSS used for? 
+      ----it adds aesthetics. HTML is like the frame of a building, CSS is the paint and decorations.
+    18. How to we select an element? Example - every h2 on the page
+      ----via the name of the element. for example: h2 { color: black }
+    19. What is the difference between a class and an id? - Give me an example of when I might use each one
+      ----a class can be used multiple times, an id only once. Best I can tell, id's should normally just be used for navigation, classes for selecting things in css.
+    20. How do we select classes in CSS?
+      ----via a preceding '.' for example .special { color: pink }
+    21. How do we select a p element with a single class of “human””?
+      ---- p.human { }
+    22. What is a parent child selector? When would this be useful? 
+      ---- selects only the child elements that directly have the preceding parent such as: parent > child { } the only time I can think this would be useful, is if you had unordered lists and ordered lists, and you wanted to do something with the list items of only one type. For example:
+      ul > li { color: green }
+    23. How do you select all links within a div with the class of sidebar?
+      ---- div.sidebar a { }
+    24. What is a pseudo selector?
+      ----pseudo-class selector? it's a selector that depends on context or state rather than the structure of the site itself. For example a:hover and a:visited 
+    25. What do we use the change the spacing between lines?
+      ----the line-height css property
+    26. What do we use to change the spacing between letters?
+      ----letter-spacing (I always have to google this one)
+    27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?
+      ----text-transform css property. uppercase|lowercase|capitalize respectively.
+    28. How do I add a 1px border around my div that is dotted and black?
+      ---- div { border: 1px dotted black; }
+    29. How do I select everything on the page? 
+      ---- use the '*' selector
+    30. How do I write a comment in CSS?
+      ---- /* comments go here */
+    31. How do I find out what file I am in, when I am using the command line? 
+      ---- directory? 'pwd' for "print working directory"
+    32. Using the command line - how do I see a list of files/folders in my current folder?
+      ---- 'ls' for "list"
+    33. How do I remove a file via the command line? Why do I have to be careful with this? 
+      ---- 'rm' for "remove" although I normally just do 'rm -rf' out of habit. There is no undo, and no output (unless you do 'rm -v')
+    34. Why should I use version control? 
+      ---- it's basically required for working with multiple people. I would say the big thing I've noticed you can do, is easily fork your projects to work on additional features (and not have those half-working features break your entire project while your working on them).
+    35. How often should I commit to github?
+      ---- to github? I would only push to github when you've finished with whatever you are working on. But locally I would(should) make commits whenever a discrete change is made.
+    36. What is the command we would use to push our repo up to github? 
+      ---- git push origin master
+    37. Walk me through Lambda's git flow.
+      ---- *Fork the repository/codebase
+           *add the TL as a collaborator (under settings->manage access)
+           *open a cli of choice, navigate to an appropriate directory, and "git clone <url-to-codebase>.git"
+           *navigate into the directory, create a branch, and checkout it. quickly it's "git checkout -b '<firstname>-<lastname>'" But I'm fond of "git branch '<branchname>';git checkout '<branchname>'" git is complicated enough already, I can have it do one thing at a time.
+           *make changes as required to the codebase
+           *add updated files, commit and leave a message, and push to github via: "git add .;git commit -m '<message>';git push -u origin <branch-name>"
+           *go to your fork of the project made on github.
+           *make sure you're on your name-branch
+           *CHANGE THE BASE REPOSITORY TO YOUR FORKED REPOSITORY
+           *add TL to the reviewers
+           *wait, and let the TL actually fulfill the merge request
+
+Stretch Questions
+
+    1. What is the difference between an inline element and a block element?
+       ----Inline elements go next to eachother horizontally. Block Elements take up the entire horizontal space.
+    2. What happens when an element is positioned absolutely? 
+       ----The place it goes on the webpage is placed directly where told, and completely ignores all other elements on the page (goes right on top of them).
+    3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width? 
+       ----Not sure what this is asking, but based on the later questions, I assume this is asking about the display property. I think the solution is "display: inline-block" but there is a massive amount of information on this (and flexbox, and grid). So I will probably spend the rest of my time reading.
+    4. Name 3 elements that are display block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
+       ----block: <p>, <h1>, and <li>
+           inline: <span>, and <a>
+           inline-block: <img>
+    5. In your own words, explain the box model. What is the "fix" for the box model, in other words, how do we make all elements respect the width we've given them? 
+       ----The box model is the idea that everything in HTML has a box around it. So you have the content inside, then padding, then a border (that you can color and apply designs to), then finally a margin.
+
+       Each of these boxes has an outer display type. commonly either block or inline. If it is block, it will sit in it's own vertical space, filling the entire horizontal area of the page. Width, and height are respected, with padding, margin, and border pushing other elements further away. Inline elements on the other hand, sit on the same line as other elements, margin, border and padding applies, but only pushes block level elements further away.
+       
+       changing display to inline-block will cause the specified width to be respected. I suspect having a parent element with "display: flex," or "display: grid" can also do this, depending on other properties.
+
+
+   --> 
